@@ -10,9 +10,6 @@ on:
         description: 'Version (x.y.z)'     
         required: true
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   printInputs:

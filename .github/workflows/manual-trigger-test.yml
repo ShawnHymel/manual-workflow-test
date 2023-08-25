@@ -1,16 +1,16 @@
-name: Manual trigger
-
-on:
+on: 
   workflow_dispatch:
     inputs:
-      name:
-        description: "Who to greet"
-        default: "World"
-
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
 jobs:
-    hello:
-        runs-on: ubuntu-latest
-
-        steps:
-        - name: Hello Step
-            run: echo "Hello"
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}" 

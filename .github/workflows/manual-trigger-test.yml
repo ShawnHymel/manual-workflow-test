@@ -3,17 +3,13 @@ name: 'Manual trigger test'
 on: 
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      version:
+        description: 'Version (x.y.z)'     
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
 
 jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}" 
+        echo "Version: ${{ github.event.inputs.version }}"

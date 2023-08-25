@@ -11,5 +11,5 @@ jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Version: ${{ github.event.inputs.version }}"
+      - name: Print version number
+        run: echo "Version: ${{ github.event.inputs.version }}"

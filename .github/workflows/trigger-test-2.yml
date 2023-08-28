@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Print version number
         run: |
-          echo "Version: ${{ github.event.inputs.version }}"
+          echo "Version (from branch): ${{ github.event.inputs.version }}"

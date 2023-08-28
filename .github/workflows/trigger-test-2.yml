@@ -6,10 +6,9 @@ on:
       version:
         description: 'Version (x.y.z)'     
         required: true
-  on:
-    push:
-      branchs:
-        - branch test-trigger-2
+  push:
+    branchs:
+      - branch test-trigger-2
 
 jobs:
   printInputs:

@@ -1,0 +1,16 @@
+name: 'Manual trigger test 2'
+
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version (x.y.z)'     
+        required: true
+
+jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print version number
+        run: |
+          echo "Version: ${{ github.event.inputs.version }}"

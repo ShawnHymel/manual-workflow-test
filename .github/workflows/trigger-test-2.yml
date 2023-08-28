@@ -6,6 +6,10 @@ on:
       version:
         description: 'Version (x.y.z)'     
         required: true
+  on:
+    push:
+      branchs:
+        - branch test-trigger-2
 
 jobs:
   printInputs:
@@ -13,4 +17,5 @@ jobs:
     steps:
       - name: Print version number
         run: |
-          echo "Version: ${{ github.event.inputs.version }}"
+          echo "hello" 
+          # "Version: ${{ github.event.inputs.version }}"
